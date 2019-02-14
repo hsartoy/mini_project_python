@@ -22,7 +22,7 @@ if __name__ == '__main__':
     f = open("ccnumbers.txt", "r")
     total = 0
     for x in f:
-        f.readline())
+        f.readline(())
         f.strip()
         total++   
     print(total)
