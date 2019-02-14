@@ -19,13 +19,15 @@ if __name__ == '__main__':
         4) Go through the file and print the total number of valid credit card numbers that you've found
     '''
     #### YOUR CODE HERE #####
-    f = open("ccnumbers.txt", "r")
+    data = open("ccnumbers.txt", "r")    #1)Open the file with potential credit card numbers, one on each line
     total = 0
-    for x in f:
-        f.readline(())
-        f.strip()
-        total++   
-    print(total)
+    for x in data:
+        data.readline(())                   #1)Open the file with potential credit card numbers, one on each line
+        data = data.replace(/[ -]/g,'');    #2) For each number, remove any trailing whitespace
+        #3) Create a regular expression to identify a valid credit card number
+        total++                             
+    print(total)                            #4) Go through the file and print the total number of valid credit card numbers that you've found
     
     ###https://www.regular-expressions.info/creditcard.html
+    ##https://docs.python.org/2/howto/regex.html
     ### Reference ^
